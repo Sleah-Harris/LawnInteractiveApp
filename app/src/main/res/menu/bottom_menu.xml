@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/bottom_live_sound"
+        android:icon="@drawable/ic_live_sound"
+        android:title="Live Sound" />
+    <item
+        android:id="@+id/bottom_suggestions"
+        android:icon="@drawable/ic_suggestions"
+        android:title="Suggestions" />
+    <item
+        android:id="@+id/bottom_stats"
+        android:icon="@drawable/ic_stats"
+        android:title="Stats" />
+
+</menu>
