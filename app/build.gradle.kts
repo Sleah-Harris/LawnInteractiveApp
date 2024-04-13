@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation("org.tensorflow:tensorflow-lite-task-audio:0.2.0") //Audio Sensing
     implementation("androidx.core:core-ktx:1.12.0")
 
     implementation("androidx.appcompat:appcompat:1.6.1")
