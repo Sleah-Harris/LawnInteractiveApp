@@ -3,9 +3,10 @@
 
     <item
         android:state_selected="true"
-        android:color = "@color/white" />
+        android:color = "@color/navHighlight" />
     <item
         android:state_selected="false"
-        android:color = "@color/green_Accent"/>
+        android:color = "@color/primaryVariant"/>
+
 
 </selector>

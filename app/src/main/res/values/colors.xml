@@ -2,6 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="orange_Accent">#FF9800</color>
-    <color name="green_Accent">#FFD596</color>
+    <color name="primaryColor">#FF9800</color>
+    <color name="primaryVariant">#FFD596</color>
+
+    <!--Todo: Changed Selection bubble to navHighlight. Couldn't find its variable-->
+    <color name="navHighlight">#F6F9FF</color>
+
 </resources>

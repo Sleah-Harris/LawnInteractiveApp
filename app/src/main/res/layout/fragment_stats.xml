@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Stats!"
         android:textSize="36sp"
-        android:textColor="@color/orange_Accent"
+        android:textColor="@color/primaryColor"
         android:layout_centerInParent="true" />
 
 </RelativeLayout>
