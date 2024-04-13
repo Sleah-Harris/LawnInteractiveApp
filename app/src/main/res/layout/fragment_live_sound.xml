@@ -8,11 +8,22 @@
     tools:context=".LiveSoundFragment">
 
     <TextView
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Live Sound!"
         android:textSize="36sp"
-        android:textColor="@color/orange_Accent"
+        android:textColor="@color/primaryColor"
         android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/detectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detect Sound"
+        android:layout_alignTop="@id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
 
 </RelativeLayout>
