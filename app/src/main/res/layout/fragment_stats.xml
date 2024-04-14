@@ -1,18 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StatsFragment">
+    tools:context=".MainActivity">
+
+    <!--TODO: Replace images with functional Android Studio Elements
+        Current elements used for the sake of exploring concept-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            app:layout_constraintBottom_toBottomOf="@+id/top_container"
+            app:layout_constraintEnd_toEndOf="@+id/top_container"
+            app:layout_constraintStart_toStartOf="@+id/top_container"
+            app:layout_constraintTop_toTopOf="@+id/top_container"
+            android:layout_width="411dp"
+            android:layout_height="75dp"
+            android:adjustViewBounds="true"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:src="@drawable/top_bar"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-10dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/stats_graph"
+        android:layout_width="381dp"
+        android:layout_height="313dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/stats_daliy_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_container" />
 
     <TextView
+        android:id="@+id/textView_dailyData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stats!"
-        android:textSize="36sp"
-        android:textColor="@color/primaryColor"
-        android:layout_centerInParent="true" />
+        android:layout_marginTop="96dp"
+        android:textStyle="bold|italic"
+        android:text="Daily data"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/textView_weekData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="432dp"
+        android:text="LAWN Week Data"
+        android:textSize="13dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_talking"
+        android:layout_width="160dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/stats_weekstat_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_weekData" />
+
+    <ImageView
+        android:id="@+id/icon_keyboard"
+        android:layout_width="160dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/stats_weekstat_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_weekData" />
+
+    <ImageView
+        android:id="@+id/icon_lawnM"
+        android:layout_width="160dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="116dp"
+        android:src="@drawable/stats_weekstat_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_weekData" />
+
+    <ImageView
+        android:id="@+id/icon_vehicle"
+        android:layout_width="160dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="116dp"
+        android:src="@drawable/stats_weekstat_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_weekData" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

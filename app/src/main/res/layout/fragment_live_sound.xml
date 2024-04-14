@@ -1,29 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LiveSoundFragment">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/header"
+    <!--TODO: Replace images with functional Android Studio Elements
+        Current elements used for the sake of exploring concept-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/topBar"
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar_container"
+            app:layout_constraintEnd_toEndOf="@+id/top_bar_container"
+            app:layout_constraintStart_toStartOf="@+id/top_bar_container"
+            app:layout_constraintTop_toTopOf="@+id/top_bar_container"
+            android:layout_width="411dp"
+            android:layout_height="75dp"
+            android:adjustViewBounds="true"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:src="@drawable/top_bar"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/detect_sound1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Live Sound!"
-        android:textSize="36sp"
-        android:textColor="@color/primaryColor"
-        android:layout_centerInParent="true" />
+        android:layout_marginTop="96dp"
+        android:src="@drawable/livesense_talking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/detect_sound2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:src="@drawable/livesense_vehicle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/detect_sound3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:src="@drawable/livesense_keyboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/detect_sound4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
+        android:src="@drawable/livesense_lawnmower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/detectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detect Sound"
-        android:layout_alignTop="@id/header"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detect_sound4" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</RelativeLayout>
+
+
+

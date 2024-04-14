@@ -31,9 +31,6 @@ class LiveSoundDetection : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(initViewBinding(layoutInflater))
 
-        val REQUEST_RECORD_AUDIO = 1337
-        requestPermissions(arrayOf(Manifest.permission.RECORD_AUDIO), REQUEST_RECORD_AUDIO)
-
         textView = findViewById<TextView>(R.id.output)
         val recorderSpecsTextView = findViewById<TextView>(R.id.textViewAudioRecorderSpecs)
 

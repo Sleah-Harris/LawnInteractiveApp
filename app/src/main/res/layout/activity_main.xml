@@ -7,13 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--TODO: Current layout hides notification button behind Top Bar.
+        Notifications should be automatic in future versions    -->
     <Button
         android:id="@+id/notifButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Notify!"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:width="400dp" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
