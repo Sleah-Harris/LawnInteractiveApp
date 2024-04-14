@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         //Posts notification when user presses button
+        //TODO: Replace notification with automatic notifications in future iterations
         binding.notifButton.setOnClickListener{
             Log.d("Main", "Button Clicked")
 

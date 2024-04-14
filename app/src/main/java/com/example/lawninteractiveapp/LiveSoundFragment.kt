@@ -1,5 +1,6 @@
 package com.example.lawninteractiveapp
 
+import android.Manifest
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +22,10 @@ class LiveSoundFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Requests permission to record audio. If not done app crashes until request given
+        val REQUEST_RECORD_AUDIO = 1337
+        requestPermissions(arrayOf(Manifest.permission.RECORD_AUDIO), REQUEST_RECORD_AUDIO)
     }
 
     override fun onCreateView(

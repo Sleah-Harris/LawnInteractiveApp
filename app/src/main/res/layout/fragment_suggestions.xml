@@ -1,18 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SuggestionsFragment">
+    tools:context=".MainActivity">
+
+    <!--TODO: Replace images with functional Android Studio Elements
+        Current elements used for the sake of exploring concept-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/suggestion_topBar"
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar_container"
+            app:layout_constraintEnd_toEndOf="@+id/top_bar_container"
+            app:layout_constraintStart_toStartOf="@+id/top_bar_container"
+            app:layout_constraintTop_toTopOf="@+id/top_bar_container"
+            android:layout_width="411dp"
+            android:layout_height="75dp"
+            android:adjustViewBounds="true"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:src="@drawable/top_bar"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Suggestions!"
-        android:textSize="36sp"
-        android:textColor="@color/primaryColor"
-        android:layout_centerInParent="true" />
+        android:text="Recent Suggestions"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@id/recentSuggestion"/>
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/recentSuggestion"
+        android:layout_width="346dp"
+        android:layout_height="213dp"
+        android:layout_marginTop="132dp"
+        android:src="@drawable/suggestions_recent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/moreSuggestionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More Suggestions"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/recentSuggestion"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/moreSuggestionsTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:id="@+id/suggestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/suggestions_more1"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/suggestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/suggestions_more2"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/suggestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/suggestions_more3"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/suggestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/suggestions_more4"
+                android:layout_marginTop="16dp"/>
+            <!-- Add more views as needed -->
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
